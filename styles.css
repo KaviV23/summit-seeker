@@ -12,7 +12,6 @@ body {
 
 .header a {
   text-align: center;
-  margin: 12px;
   color: #fff;
   text-decoration: none;
   font-size: 18px; 
@@ -20,7 +19,10 @@ body {
   border-radius: 4px;
   font-weight: bold;
 }
-
+.loginIcon
+{
+	margin: 0 12px !important;
+}
 .header a.logo {
   font-size: 25px;
   font-weight: bold;
@@ -39,10 +41,71 @@ body {
 .header-right a img {
   vertical-align: middle;
 }
+li {
+    list-style: none;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+.nav-menu {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+	padding-left: 0;
+	margin: 0;
+}
+.nav-menudesktop 
+{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	padding-left: 0;
+	margin: 0;
+}
+
+.nav-item {
+    margin : 0 12px;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+}
+.nav-logo img
+{
+	width: 200px;
+	margin: 0 12px;
+}
+.mobilemenu
+{
+	display: none;
+}
 
 .banner {
   height: 238px;
-  background: url("images and logos/banner.png");
+  background: url("images/banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   display:flex;
@@ -173,4 +236,168 @@ body {
     max-width: 300px;
     height: auto;
   }
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 2rem;
+    height: 0.25rem;
+    background: #fff;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .header-right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #228C22;
+    }
+
+    .header-right a {
+        text-align: left;
+        padding: 10px;
+    }
+
+    .header-right.active {
+        display: flex;
+    }
+}
+
+.hamburger-menu.toggle span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.toggle span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media only screen and (max-width: 700px) {
+.nav-logomobile img
+{
+	width: 200px;
+}
+.mobilemenu
+{
+	display: block;
+	float: right;
+	width: 75%;
+}
+.nav-menudesktop
+{
+	display: none;
+}
+.nav-menu
+{
+	display: flex;
+}
+.loginIcon
+{
+	border: 2px solid #228C22;
+	border-radius: 50%;
+}
+.navbar
+{
+	display: block;
+}
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 120px;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        padding: 10px 0;
+		width: 100%;
+    }
+
+	.nav-link
+	{
+		color: #228C22 !important;
+	}
+	.nav-loginlink
+	{
+		float: right !important;
+		margin: 20px 10px;		
+	}
+	.nav-logomobile
+	{
+		float: left !important;
+	}
+	.nav-logo
+	{
+		float: right !important;
+		display: none !important;
+	}
+    .hamburger {
+        display: block;
+        cursor: pointer;
+		float: left;
+		margin: 35px 0;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+@media only screen and (max-width: 420px) {
+	.mobilemenu
+	{
+		width: 78%;
+	}
+}
+@media only screen and (max-width: 391px) {
+	.mobilemenu
+	{
+		width: 80%;
+	}
+}
+@media only screen and (max-width: 361px) {
+	.mobilemenu
+	{
+		width: 83%;
+	}
 }
