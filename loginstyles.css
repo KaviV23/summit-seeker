@@ -1,0 +1,235 @@
+* {box-sizing: border-box;}
+body {
+    margin: 0;
+    margin-top: 113.5px;
+    background-image: url(images\ and\ logos/image4.jpg);
+    background-repeat: none;
+    background-position: center;
+    line-height : 0%;   
+}
+
+header {
+    background-color: #228C22;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    justify-content:space-between;
+    flex-direction: column;
+    width: 50px;
+    height: 38px;
+  }
+  
+  .hamburger .bar {
+    background-color: #fff;
+    width:  50px;
+    height: 6px;
+  }
+  
+  .hamburger .bar:first-of-type {
+    margin: 0;
+  }
+  
+  header .logo img {
+    height: 70px;
+  }
+  
+  header .navigation {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navigation ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .navigation li {
+    margin-left: 20px;
+    font-family: OpenSans, sans-serif;
+    font-weight: bold;
+  }
+  
+  .navigation li:first-child {
+    margin: 0;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .navigation .current {
+    border-bottom: 2px solid #fff;
+  }
+  
+  .navigation .login-icon img {
+    display: flex;
+    height: 50px;
+    margin-left: 20px;
+  }
+  
+  @media(max-width: 750px) {
+    .navigation ul {
+        position: fixed;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        top: 113.5px;
+        left: -100%;
+        flex-direction: column;
+        text-align: center;
+        background-color: #7080907f;
+        backdrop-filter: blur(5px);
+        width: 100%;
+        transition: 0.5s;
+    }
+  
+    .navigation li {
+        margin-left: 0;
+        padding-top: 50px;
+        font-size: 1.5em;
+    }
+  
+    .navigation li:last-child {
+        padding-bottom: 50px;
+    }
+  
+    .navigation ul.active {
+        left: 0px;
+    }
+  
+    .navigation .login-icon img {
+        margin: 0;
+    }
+    
+    .hamburger{
+        display: flex;
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(16px) rotate(45deg);
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-16px) rotate(-45deg);
+    }
+  }
+
+@media only screen and (max-width: 420px) {
+	.mobilemenu {
+		width: 78%;
+	}
+}
+@media only screen and (max-width: 391px) {
+	.mobilemenu {
+		width: 80%;
+	}
+}
+@media only screen and (max-width: 361px) {
+	.mobilemenu {
+		width: 83%;
+	}
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+    flex-wrap: wrap;
+    margin: -90px 0 50px 0;
+}
+
+form{
+    background-color: #7080907f;
+    backdrop-filter: blur(5px);
+    width: 50%;
+    min-width: 500px;
+    padding: 20px;
+}
+
+.flexitem2 {
+    margin-left:20px ;
+    margin-bottom: 10px;
+
+}
+
+.flexitem1{
+    display: flex;
+    margin-left:20px ;
+    min-width: 746px;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-end;
+    
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    min-height: 100px;
+    font-family: arvo;
+    font-size: 48px;
+    padding: 0;
+    color: white;
+}
+input{
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px 0;
+    color: white;
+}
+
+label {
+    font-family: Open-Sans;
+    font-size: 18px;
+    display: inline-block;
+    color: white;
+    /* margin-left: 3px; */
+    margin: 10px 0 10px 3px;
+}
+
+.flexbox a {
+    color: white;
+}
+
+button {
+    display: block;
+    padding: 10px 0;
+    width: 90%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@font-face{
+    font-family: Open-sans;
+    src: url(fonts/OpenSans-Regular.ttf)
+  }
+
+  @font-face{
+    font-family: Arvo;
+    src: url(fonts/Arvo-Bold.ttf)
+  }
+
+
+p,button{
+    font-family: Open-sans ;
+}

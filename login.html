@@ -4,9 +4,80 @@
         <title>
             Login
         </title>
-        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel ="stylesheet" href="loginstyles.css">
+        <link rel ="stylesheet" type="text/css" href="headerstyle.css"><!--External stylesheet-->
     </head>
     <body>
-        Your main content
+        <header>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="logo">
+                <a href="home_main.html"><img src="images and logos/logo.png"></a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="home_main.html">Home</a></li>
+                    <li><a href="news & reviews.html">News & Reviews</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="kathir.contact.html">Contact</a></li>
+                </ul>
+                <div class="login-icon">
+                    <a href="login.html" class="current"><img src="images and logos/Login.png"></a>
+                </div>
+                <script src="hamburger.js"></script>
+            </nav>
+        </header>
+        <!--div class="header">
+            <a href="#default" class="logo header_firstSection "><img src="../WEB1201_FinalAssn-main_version1/images_and_logos/logo.png"></a>
+            <div class="header-right">
+                <a class = "header_MiddleSection" href="../WEB1201_FinalAssn-main_version1/about.html">Home</a>
+                <a class = "header_MiddleSection" href="../WEB1201_FinalAssn-main_version1/index.html">News & Reviews</a>
+                <a class = "header_MiddleSection" href="../WEB1201_FinalAssn-main_version1/community.html">Community</a>
+                <a class = "header_MiddleSection" href="../WEB1201_FinalAssn-main_version1/contact.html">Contact</a>
+                <a class="header_endSection" href="#"><img src="../WEB1201_FinalAssn-main_version1/images_and_logos/Login.png" width="50"></a>
+            </div>
+        </div-->
+
+
+        
+        <div class ="flexbox">
+            <form action="home_main.html" method="post" id ="form" >
+                <h1 >Sign up</h1> 
+                <div class = "flexitem1">
+                    <label for="username">Username</label>
+                </div>
+                <input class = "input1" type ="text" name = "Username" id="Username" >
+                <div class="flexitem2" >
+                    <label for="Password">Password</label>
+                </div>
+                <input class = "input2" type = "password" name = Password id="Password">
+                <button class ="button1" type="submit">Create account</button>
+                <button class ="button2" type="submit">Login</button>
+            </form>
+        </div>
+        <script  src ="LOGINscript.js"></script>
+		<script>
+	const hamburger = document.querySelector(".hamburger");
+	const navMenu = document.querySelector(".nav-menu");
+	const navLink = document.querySelectorAll(".nav-link");
+
+	hamburger.addEventListener("click", mobileMenu);
+	navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+	function mobileMenu() {
+		hamburger.classList.toggle("active");
+		navMenu.classList.toggle("active");
+	}
+
+	function closeMenu() {
+		hamburger.classList.remove("active");
+		navMenu.classList.remove("active");
+	}
+	</script>
     </body>
 </html>
