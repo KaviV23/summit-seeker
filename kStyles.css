@@ -187,14 +187,6 @@ h1 {
     margin: 0;
 }
 
-.banner a {
-    font-family: OpenSans, sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-    color: #b9d171;
-    margin-top: 0;
-}
-
 @media(max-width: 750px) {
     h1 {
         font-size: 32px;
