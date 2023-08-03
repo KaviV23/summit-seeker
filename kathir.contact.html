@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="applying header.css">
+<title>Contact</title>
+</head>
+
+    <header>
+        
+    <section class="banner">
+		<h1>Search</h1>
+		<input type="text" class="searchBox" name="searchBox" id="searchBox" placeholder="Enter a topic...">
+	</section>
+
+
+    <div class="row">
+        <div class="column">
+
+            <h1>Contact Us</h1>
+            <ul>
+                <li>Front Desk<br>
+                    038944992
+                </li>
+                <li>Fax<br>
+                     0455299352
+                </li>
+                <li>Email<br>
+                    Summitseeker@gmail.com
+                </li>
+            </ul>
+
+        </div>
+        <div class="column">
+            <h1>Feedback Form</h1>
+                    <h2>Fields with * are mandatory</h2>
+                    <form>
+
+                        <form style="margin-top:15px;">
+                        <label for="name">Name*</label><br>
+                        <input type="text" id="name"><br>
+                        <label for="age">Age*</label><br>
+                        <input type="number" id="age"><br>
+                        <label for="email">Email*</label><br>
+                        <input type="text" id="email"><br>
+                        <label for="message">Message</label><br>
+                        <textarea id="message" name="Message" rows="10" cols="51"></textarea><br>
+                    </form>
+
+                    <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+
+                    <div class="popup" id="popup">
+                        <img src="invertedlogo.png">
+                        <h3>Thank you for your support</h3>
+                        <h4>HAPPY TRAILS!</h4>
+                        <button type="button" onclick="closePopup()">ok</button>
+        </div>
+      </div>
+</body>
+
+<script>
+    let popup = document.getElementById("popup");
+
+    function openPopup(){
+        popup.classList.add("open-popup");
+    }
+
+    function closePopup(){
+        popup.classList.remove("open-popup");
+    }
+    document.getElementById('searchBox').addEventListener('keydown', function(e) {
+    if (e.code === 'Enter' || e.code === 'NumpadEnter') {
+        alert('You searched for: ' + this.value);
+    }
+})
+
+</script>
