@@ -1,0 +1,383 @@
+* {box-sizing: border-box;}
+body {
+  margin: 0%;
+}
+p {
+  font-family: OpenSans;
+}
+h1 {
+  font-family: Arvo;
+  font-size: 48px;
+  margin: 0;
+}
+
+header {
+  background-color: #228C22;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  justify-content:space-between;
+  flex-direction: column;
+  width: 50px;
+  height: 38px;
+}
+
+.hamburger .bar {
+  background-color: #fff;
+  width:  50px;
+  height: 6px;
+}
+
+.hamburger .bar:first-of-type {
+  margin: 0;
+}
+
+header .logo img {
+  height: 70px;
+}
+
+header .navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+}
+
+.navigation li {
+  margin-left: 20px;
+  font-family: OpenSans, sans-serif;
+  font-weight: bold;
+}
+
+.navigation li:first-child {
+  margin: 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navigation .current {
+  border-bottom: 2px solid #fff;
+}
+
+.navigation .login-icon img {
+  display: flex;
+  height: 50px;
+  margin-left: 20px;
+}
+
+@media(max-width: 750px) {
+  .navigation ul {
+      position: fixed;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      top: 113.5px;
+      left: -100%;
+      flex-direction: column;
+      text-align: center;
+      background-color: #7080907f;
+      backdrop-filter: blur(5px);
+      width: 100%;
+      transition: 0.5s;
+  }
+
+  .navigation li {
+      margin-left: 0;
+      padding-top: 50px;
+      font-size: 1.5em;
+  }
+
+  .navigation li:last-child {
+      padding-bottom: 50px;
+  }
+
+  .navigation ul.active {
+      left: 0px;
+  }
+
+  .navigation .login-icon img {
+      margin: 0;
+  }
+  
+  .hamburger{
+      display: flex;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(16px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-16px) rotate(-45deg);
+  }
+}
+
+@media only screen and (max-width: 420px) {
+	.mobilemenu {
+		width: 78%;
+	}
+}
+@media only screen and (max-width: 391px) {
+	.mobilemenu {
+		width: 80%;
+	}
+}
+@media only screen and (max-width: 361px) {
+	.mobilemenu {
+		width: 83%;
+	}
+}
+
+.banner {
+  margin-top: 113.5px;
+  height: 300px;
+  background: url("images and logos/banner_kinabalu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  flex-direction: column;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h1 {
+  margin: 0 0 20px 0;
+  font-family: Arvo;
+  text-align: center;
+}
+
+.searchBox {
+  width: 50%;
+  border: none;
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 45px;
+}
+
+.searchBox:hover{
+  background-color: grey;
+  color: black
+}
+.searchBox input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  color: green;
+  border: none
+}          
+
+.late h1{                                                                                                               
+  margin: 0;
+  color: #8A9A5B;
+  background-color: red;
+}
+
+.content {
+  width: 70%;
+  min-width: 720px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.content h1 {
+  color: #8A9A5B;
+}
+
+.discussion-container {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: 180px;
+  grid-auto-columns: 100%;
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.discussion-item {
+  display: flex;
+  background-color: #eee;
+  padding: 10px;
+  align-items: center;
+}
+
+.discussion-item img {
+  float: left;
+  height: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.discussion-item .discussion-info {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.discussion-item h2 {
+  font-family: OpenSans-Semibold, sans-serif;
+  font-size: 28px;
+  color: #708090;
+  margin: 0;
+}
+
+.discussion-item p {
+  font-family: OpenSans, sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+@media(max-width: 750px){
+  .content {
+    box-sizing: border-box;
+    min-width: 0;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .content h1 {
+    font-size: 36px;
+  }
+
+  .discussion-container {
+      grid-auto-rows: 150px;
+      grid-auto-columns: 100%;
+      gap: 10px;
+  }
+  
+  .discussion-item h2 {
+      font-size: 24px;
+  }
+
+  .discussion-item img {
+      height: 100%;
+      aspect-ratio: 4 / 3;
+  }
+
+  .discussion-item h2 {
+      font-size: 20px;
+  }
+  
+  .discussion-item p {
+      font-size: 13px;
+  }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: lightgray; 
+  }
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  
+  
+  
+label {
+    padding-right: 100px;
+    color: darkgray;
+    color: white;
+    font-size: 50px;
+}
+@media screen and (max-width: 800px) {
+  .flexbox-container {
+    width:100%;
+  }
+
+  #seardisc{
+    width:95%;
+  }
+  .search{
+    width:90%;
+    
+  }
+
+  .flexitem{
+    min-width: 30%;
+    padding-left: 10px;
+  }
+  .flexitem2{
+    min-width: 20%;
+    
+    
+  }
+
+  .fleximg {
+    width: 225px;
+    height: 200px;
+  }
+
+  .seardisc {
+    min-width: 250px;
+  }
+
+  div div p {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 2000px) and (min-width: 750px){
+    #seardisc{
+      width:100%;
+    }
+
+  }
+}
+@font-face{
+  font-family: OpenSans;
+  src: url("fonts/OpenSans-Regular.ttf")
+}
+
+@font-face {
+  font-family: OpenSans-SemiBold;
+  src: url(fonts/OpenSans-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(fonts/OpenSans-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face{
+  font-family: Arvo;
+  src: url("fonts/Arvo-Bold.ttf")
+}

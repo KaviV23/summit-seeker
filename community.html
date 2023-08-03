@@ -4,9 +4,83 @@
         <title>
             Community
         </title>
-        <meta charset="utf-8">
+
+        <link rel ="stylesheet" type="text/css" href="Community_styles.css"><!--External stylesheet-->
+        <link rel ="stylesheet" type="text/css" href="headerstyle.css">     <!--External stylesheet-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        Your main content
+		<header>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="logo">
+                <a href="home_main.html"><img src="images and logos/logo.png"></a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="home_main.html">Home</a></li>
+                    <li><a href="news & reviews.html">News & Reviews</a></li>
+                    <li><a href="community.html" class="current">Community</a></li>
+                    <li><a href="kathir.contact.html">Contact</a></li>
+                </ul>
+                <div class="login-icon">
+                    <a href="login.html"><img src="images and logos/Login.png"></a>
+                </div>
+                <script src="hamburger.js"></script>
+            </nav>
+        </header>
+        <section class="banner">
+            <h1>Search Discussions</h1>
+            <input type="text" class="searchBox" name="searchBox" id="searchBox" placeholder="Enter a topic...">
+	    </section>
+        <div class="content">
+            <h1>Latest Discussion</h1>
+            <div class="discussion-container">
+                <div class="discussion-item">
+                    <img src="images and logos/NegaraNational Park.jpg">
+                    <div class="discussion-info">
+                        <h2>Taman Negara National Park</h2>
+                        <p>I just finished hiking on Taman Negara National Park. It consists of a pristine rain...</p>
+                    </div>
+                </div>
+                <div class="discussion-item">
+                    <img src="images and logos/img_6183.webp">
+                    <div>
+                        <h2>Newly Opened Genting Highland Trail</h2>
+                        <p>The long anticipate opening of Genting Highland trail has finally open and it was a thrill!</p>
+                    </div>
+                </div>
+                <div class="discussion-item">
+                    <img src="images and logos/Forest.jpg">
+                    <div>
+                        <h2>New secret trail in SS15</h2>
+                        <p>Newly discovered trail just behind the Nasi Kandar resto!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script  src ="Communityscript.js"></script>
+		<script>
+	const hamburger = document.querySelector(".hamburger");
+	const navMenu = document.querySelector(".nav-menu");
+	const navLink = document.querySelectorAll(".nav-link");
+
+	hamburger.addEventListener("click", mobileMenu);
+	navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+	function mobileMenu() {
+		hamburger.classList.toggle("active");
+		navMenu.classList.toggle("active");
+	}
+
+	function closeMenu() {
+		hamburger.classList.remove("active");
+		navMenu.classList.remove("active");
+	}
+	</script>
     </body>
 </html>
